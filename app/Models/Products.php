@@ -32,4 +32,15 @@ class Products extends Model
 
     protected $dates = ['delivery_date', 'expiry_date'];
 
+    protected $appends = ['time_left'];
+
+    public function getTimeLeftAttribute()
+    {
+        $difference = \Carbon\Carbon::now()->diff($this->expiry_date);
+        $diffInMinutes = $difference->i; //23
+        $diffInHours   = $difference->h; //8
+        $diffInDays    = $difference->d; //21
+        return $diffInDays.':'.$diffInHours.':'.$diffInMinutes;
+    }
+
 }

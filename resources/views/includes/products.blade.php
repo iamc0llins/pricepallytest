@@ -76,7 +76,7 @@
                                                     </span>{{ $shop_product->demand_increase }}% | <span class="{{ $shop_product->is_in_season?'clr-gr': '' }}">In Season</span></a>
                                                 <h5 class="mb-2 mt-2 font-weight-bold simhead">₦{{ number_format($shop_product->price) }} <small>per
                                                         slot ({{ $shop_product->slot_per_person }})</small></h5>
-                                                <h6 class="mb-2">Time left: 68:50:52</h6>
+                                                <h6 class="mb-2">Time left: {{ $shop_product->time_left}}</h6>
                                                 <ul class="list-unstyled pallylist-bg mb-2">
                                                     @for ($i = 0; $i < $shop_product->slot_booked; $i++)
                                                         <li class="d-inline-block pally-left">
