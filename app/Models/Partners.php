@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Partners extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'image_thumbnail',  
+    ];
 }

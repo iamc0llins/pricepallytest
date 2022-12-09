@@ -32,12 +32,4 @@ class Products extends Model
 
     protected $dates = ['delivery_date', 'expiry_date'];
 
-    // protected $appends = ['time_left'];
-
-    // public function getTimeLeftAttribute()
-    // {
-
-    //     return $this->image_thumbnail_path . $this->image_thumbnail;
-    // }
-
 }
