@@ -2,7 +2,6 @@
 
 @section('content')
     @include('includes.hero')
-          <!-- </div> -->
     @include('includes.category-slider')
     @include('includes.products')
     @include('includes.partners')
